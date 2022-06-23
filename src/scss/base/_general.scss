@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+      180deg,
+      rgba($color-black, 0.5) 0%,
+      rgba($color-black, 0) 50%,
+      rgba($color-black, 0.5) 100%
+    ),
+    url('../img/bg.png') repeat 0 0 / 70px 70px;
+  color: $color-black;
+  font: $body-font;
+  -webkit-tap-highlight-color: rgba($color-black, 0);
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: linear-gradient(
+        180deg,
+        rgba($color-black, 0.5) 0%,
+        rgba($color-black, 0) 50%,
+        rgba($color-black, 0.5) 100%
+      ),
+      url('../img/bg@2x.png') repeat 0 0 / 70px 70px;
+  }
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
